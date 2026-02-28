@@ -13,7 +13,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import Terms from "@/pages/Terms";
-import ThankYou from "@/pages/thank-youpage";
+import ThankYou from "./pages/ThankYou";
 
 function Router() {
   return (
