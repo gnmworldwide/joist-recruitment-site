@@ -62,12 +62,13 @@ export default function Candidates() {
               </div>
             </div>
           </div>
-
+          
           <div className="bg-black p-8 border border-white/10">
             <h2 className="text-2xl font-heading font-bold mb-2">Submit Your Details</h2>
             <p className="text-sm text-muted-foreground mb-6">Register your interest below for a confidential discussion.</p>
             
-            <form action="https://formspree.io/f/placeholder" method="POST" className="space-y-4">
+            <form action="https://formspree.io/f/mreadrpw"    method="POST" className="space-y-4">
+              <input type="hidden" name="_redirect" value="https://joistrecruitment.co.uk/thank-you" />
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white/80">Full Name *</label>
                 <Input name="name" required className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary" />

@@ -36,7 +36,7 @@ export default function Contact() {
                   </div>
                 </a>
                 
-                <a href="tel:+447563581741" className="flex items-center gap-4 group">
+<a href="tel:+447563581741">+44 7563 581741</a> className="flex items-center gap-4 group">
                   <div className="w-12 h-12 bg-card border border-white/5 flex items-center justify-center group-hover:border-primary transition-colors">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
@@ -61,11 +61,11 @@ export default function Contact() {
             <div>
               <h2 className="text-2xl font-bold mb-6 border-b border-white/10 pb-4">Schedule a Call</h2>
               <p className="text-sm text-muted-foreground mb-6">Find a time that works for you in our calendar.</p>
-              {/* Calendly Placeholder */}
-              <a href="https://calendly.com/placeholder" target="_blank" rel="noreferrer">
+              <a href="mailto:hello@joistrecruitment.co.uk">
                 <Button variant="outline" className="h-12 border-primary text-primary hover:bg-primary hover:text-white rounded-none w-full">
-                  <CalendarDays className="w-4 h-4 mr-2" />
-                  Open Calendar
+                  Email Us
+                </Button>
+              </a>
                 </Button>
               </a>
             </div>
@@ -74,7 +74,8 @@ export default function Contact() {
           {/* General Enquiry Form */}
           <div className="lg:col-span-7 bg-black p-8 border border-white/10">
             <h2 className="text-2xl font-heading font-bold mb-6">General Enquiry</h2>
-            <form action="https://formspree.io/f/placeholder" method="POST" className="space-y-4">
+            <form action="https://formspree.io/f/xbdabqww" method="POST">className="space-y-4"> 
+             <input type="hidden" name="_redirect" value="https://joistrecruitment.co.uk/thank-you" /> 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white/80">Name *</label>

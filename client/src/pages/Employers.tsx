@@ -59,10 +59,9 @@ export default function Employers() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
               <h3 className="text-xl font-heading font-bold mb-4 relative z-10">Prefer a direct conversation?</h3>
               <p className="text-sm text-muted-foreground mb-6 relative z-10">Schedule a confidential discovery call directly with our lead consultant to discuss your immediate hiring requirements.</p>
-              {/* Calendly Placeholder */}
-              <a href="https://calendly.com/placeholder" target="_blank" rel="noreferrer" className="relative z-10">
+              <a href="mailto:hello@joistrecruitment.co.uk" className="relative z-10">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none">
-                  Book a Call
+                  Email Us
                 </Button>
               </a>
             </div>
@@ -71,7 +70,8 @@ export default function Employers() {
           {/* Employer Lead Form */}
           <div className="bg-black p-8 border border-white/10">
             <h2 className="text-2xl font-heading font-bold mb-6">Register a Vacancy</h2>
-            <form action="https://formspree.io/f/placeholder" method="POST" className="space-y-4">
+            <form action="https://formspree.io/f/mwvnzalj"  method="POST">  method="POST" className="space-y-4">
+              <input type="hidden" name="_redirect" value="https://joistrecruitment.co.uk/thank-you" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white/80">Company Name *</label>
