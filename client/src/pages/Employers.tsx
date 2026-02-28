@@ -70,7 +70,7 @@ export default function Employers() {
           {/* Employer Lead Form */}
           <div className="bg-black p-8 border border-white/10">
             <h2 className="text-2xl font-heading font-bold mb-6">Register a Vacancy</h2>
-            <form action="https://formspree.io/f/mwvnzalj"  method="POST">  method="POST" className="space-y-4">
+            <form action="https://formspree.io/f/mwvnzalj"  method="POST" className="space-y-4">
               <input type="hidden" name="_redirect" value="https://joistrecruitment.co.uk/thank-you" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
