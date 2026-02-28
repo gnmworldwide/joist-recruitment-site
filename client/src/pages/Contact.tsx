@@ -2,11 +2,11 @@ import PageLayout from "@/components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, CalendarDays } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <PageLayout 
+    <PageLayout
       title="Contact Us | Joist Recruitment"
       description="Get in touch with Joist Recruitment. London-based construction recruitment specialists."
     >
@@ -24,36 +24,44 @@ export default function Contact() {
           {/* Direct Contact Info */}
           <div className="lg:col-span-5 space-y-12">
             <div>
-              <h2 className="text-2xl font-bold mb-6 border-b border-white/10 pb-4">Direct Contact</h2>
+              <h2 className="text-2xl font-bold mb-6 border-b border-white/10 pb-4">
+                Direct Contact
+              </h2>
+
               <div className="space-y-6">
-                <a href="mailto:hello@joistrecruitment.co.uk" className="flex items-center gap-4 group">
+                {/* Email */}
+                <a
+                  href="mailto:hello@joistrecruitment.co.uk"
+                  className="flex items-center gap-4 group"
+                >
                   <div className="w-12 h-12 bg-card border border-white/5 flex items-center justify-center group-hover:border-primary transition-colors">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium group-hover:text-primary transition-colors">hello@joistrecruitment.co.uk</p>
-                  </div>
-                </a>
-                
-                <a href="tel:+447563581741" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-card border border-white/5 flex items-center justify-center group-hover:border-primary transition-colors">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-medium group-hover:text-primary transition-colors">+44 7563 581741</p>
-                  </div>
-                </a>
-                  <div className="w-12 h-12 bg-card border border-white/5 flex items-center justify-center group-hover:border-primary transition-colors">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-medium group-hover:text-primary transition-colors">+44 7563 581741</p>
+                    <p className="font-medium group-hover:text-primary transition-colors">
+                      hello@joistrecruitment.co.uk
+                    </p>
                   </div>
                 </a>
 
+                {/* Phone */}
+                <a
+                  href="tel:+447563581741"
+                  className="flex items-center gap-4 group"
+                >
+                  <div className="w-12 h-12 bg-card border border-white/5 flex items-center justify-center group-hover:border-primary transition-colors">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Phone</p>
+                    <p className="font-medium group-hover:text-primary transition-colors">
+                      +44 7563 581741
+                    </p>
+                  </div>
+                </a>
+
+                {/* Location */}
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-card border border-white/5 flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-primary" />
@@ -66,61 +74,143 @@ export default function Contact() {
               </div>
             </div>
 
+            {/* Schedule a call */}
             <div>
-              <h2 className="text-2xl font-bold mb-6 border-b border-white/10 pb-4">Schedule a Call</h2>
-              <p className="text-sm text-muted-foreground mb-6">Find a time that works for you in our calendar.</p>
-              <a href="mailto:hello@joistrecruitment.co.uk">
-                <Button variant="outline" className="h-12 border-primary text-primary hover:bg-primary hover:text-white rounded-none w-full">
-                  Email Us
+              <h2 className="text-2xl font-bold mb-6 border-b border-white/10 pb-4">
+                Schedule a Call
+              </h2>
+              <p className="text-sm text-muted-foreground mb-6">
+                Find a time that works for you in our calendar.
+              </p>
+
+              {/* Calendly placeholder: replace href later */}
+              <a
+                href="#"
+                aria-label="Book a call (Calendly link to be added)"
+              >
+                <Button
+                  variant="outline"
+                  className="h-12 border-primary text-primary hover:bg-primary hover:text-white rounded-none w-full"
+                >
+                  Book a Call
                 </Button>
               </a>
+
+              <p className="text-xs text-muted-foreground mt-3">
+                (Replace this link with your Calendly URL in Contact.tsx)
+              </p>
             </div>
           </div>
 
           {/* General Enquiry Form */}
           <div className="lg:col-span-7 bg-black p-8 border border-white/10">
-            <h2 className="text-2xl font-heading font-bold mb-6">General Enquiry</h2>
-            <form action="https://formspree.io/f/xbdabqbw" method="POST" className="space-y-4">
-             <input type="hidden" name="_redirect" value="https://joistrecruitment.co.uk/thank-you" /> 
+            <h2 className="text-2xl font-heading font-bold mb-6">
+              General Enquiry
+            </h2>
+
+            <form
+              action="https://formspree.io/f/xbdabqbw"
+              method="POST"
+              className="space-y-4"
+            >
+              {/* Redirect after submit */}
+              <input
+                type="hidden"
+                name="_redirect"
+                value="https://joistrecruitment.co.uk/thank-you"
+              />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white/80">Name *</label>
-                  <Input name="name" required className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary" />
+                  <label className="text-sm font-medium text-white/80">
+                    Name *
+                  </label>
+                  <Input
+                    name="name"
+                    required
+                    className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary"
+                  />
                 </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white/80">Company (Optional)</label>
-                  <Input name="company" className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary" />
+                  <label className="text-sm font-medium text-white/80">
+                    Company (Optional)
+                  </label>
+                  <Input
+                    name="company"
+                    className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary"
+                  />
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white/80">Email *</label>
-                  <Input type="email" name="email" required className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary" />
+                  <label className="text-sm font-medium text-white/80">
+                    Email *
+                  </label>
+                  <Input
+                    type="email"
+                    name="email"
+                    required
+                    className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary"
+                  />
                 </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white/80">Phone</label>
-                  <Input type="tel" name="phone" className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary" />
+                  <label className="text-sm font-medium text-white/80">
+                    Phone
+                  </label>
+                  <Input
+                    type="tel"
+                    name="phone"
+                    className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary"
+                  />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-white/80">Enquiry Type</label>
-                <select name="enquiry_type" className="flex h-10 w-full rounded-none border border-white/10 bg-background/50 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
-                  <option value="Hiring" className="bg-black">I am looking to hire</option>
-                  <option value="Job Search" className="bg-black">I am looking for a new role</option>
-                  <option value="Other" className="bg-black">Other General Enquiry</option>
+                <label className="text-sm font-medium text-white/80">
+                  Enquiry Type
+                </label>
+                <select
+                  name="enquiry_type"
+                  className="flex h-10 w-full rounded-none border border-white/10 bg-background/50 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                >
+                  <option value="Hiring" className="bg-black">
+                    I am looking to hire
+                  </option>
+                  <option value="Job Search" className="bg-black">
+                    I am looking for a new role
+                  </option>
+                  <option value="Other" className="bg-black">
+                    Other General Enquiry
+                  </option>
                 </select>
               </div>
 
               <div className="space-y-2 pt-2">
-                <label className="text-sm font-medium text-white/80">Message *</label>
-                <Textarea name="message" required rows={5} className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary resize-none" />
+                <label className="text-sm font-medium text-white/80">
+                  Message *
+                </label>
+                <Textarea
+                  name="message"
+                  required
+                  rows={5}
+                  className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary resize-none"
+                />
               </div>
 
-              <Button type="submit" className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-none font-bold mt-4">
+              <Button
+                type="submit"
+                className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-none font-bold mt-4"
+              >
                 Send Message
               </Button>
+
+              <p className="text-xs text-muted-foreground mt-3">
+                Form powered by Formspree. Replace the action URL with your real
+                Formspree endpoint.
+              </p>
             </form>
           </div>
         </div>
