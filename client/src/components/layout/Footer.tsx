@@ -1,79 +1,112 @@
-import { Link } from "wouter";
+import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-black border-t border-white/10 pt-16 pb-8">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer className="border-t border-white/10 bg-black">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-6 h-6 bg-primary rotate-45 flex items-center justify-center">
-                <div className="w-2 h-2 bg-black -rotate-45" />
-              </div>
-              <span className="font-heading font-bold text-xl text-white">
-                Joist<span className="text-primary">.</span>
-              </span>
+          <div className="md:col-span-4 space-y-4">
+            <div className="text-lg font-heading font-bold">
+              Joist <span className="text-primary">Recruitment</span>
             </div>
-            <p className="text-muted-foreground text-sm mb-6 max-w-sm">
-              Precision Recruitment for the Built Environment. Specialist UK construction recruiter powered by structured, tech-enabled sourcing.
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Boutique construction recruitment specialists focused on Quantity Surveying, with coverage across engineering, MEP and site leadership roles.
             </p>
           </div>
 
           {/* Links */}
-          <div>
-            <h4 className="font-heading font-semibold text-white mb-6">Navigation</h4>
-            <ul className="space-y-4 flex flex-col">
-              <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Home</Link>
-              <Link href="/employers" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Employers</Link>
-              <Link href="/candidates" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Candidates</Link>
-              <Link href="/sectors" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Sectors</Link>
-              <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">About</Link>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-heading font-semibold text-white mb-6">Legal</h4>
-            <ul className="space-y-4 flex flex-col">
-              <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Privacy Policy</Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Terms of Service</Link>
+          <div className="md:col-span-4">
+            <h3 className="text-sm font-semibold mb-4">Navigation</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/employers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Employers
+                </a>
+              </li>
+              <li>
+                <a href="/candidates" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Candidates
+                </a>
+              </li>
+              <li>
+                <a href="/sectors" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Sectors
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-heading font-semibold text-white mb-6">Contact</h4>
-            <ul className="space-y-4">
-              <li className="text-sm text-muted-foreground">
-                <a href="mailto:hello@joistrecruitment.co.uk" className="hover:text-primary transition-colors">
+          <div className="md:col-span-4">
+            <h3 className="text-sm font-semibold mb-4">Contact</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary" />
+                <a
+                  href="mailto:hello@joistrecruitment.co.uk"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   hello@joistrecruitment.co.uk
                 </a>
               </li>
-              <li className="text-sm text-muted-foreground">
-                <a href="tel:+447563581741">+44 7563 581741</a> className="hover:text-primary transition-colors">
+
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary" />
+                <a
+                  href="tel:+447563581741"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   +44 7563 581741
                 </a>
               </li>
-              <li className="text-sm text-muted-foreground pt-4">
-                London, United Kingdom
-              </li>
             </ul>
+
+            <div className="flex items-center gap-3 mt-6">
+              <a
+                href="#"
+                aria-label="LinkedIn (add link)"
+                className="p-2 border border-white/10 hover:border-primary rounded-none transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram (add link)"
+                className="p-2 border border-white/10 hover:border-primary rounded-none transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Bottom */}
+        <div className="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {currentYear} Joist Recruitment. All rights reserved.
+            © {new Date().getFullYear()} Joist Recruitment. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all">
-              in
+          <div className="flex items-center gap-4">
+            <a href="/privacy" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+              Privacy Policy
             </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all">
-              tw
+            <a href="/terms" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+              Terms
             </a>
           </div>
         </div>
