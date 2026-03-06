@@ -5,54 +5,71 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-black">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          {/* Brand */}
           <div className="md:col-span-4 space-y-4">
             <div className="text-lg font-heading font-bold">
               Joist <span className="text-primary">Recruitment</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Boutique construction recruitment specialists focused on Quantity Surveying, with coverage across engineering, MEP and site leadership roles.
+              Boutique construction recruitment specialists focused on Quantity
+              Surveying, with coverage across engineering, MEP and site
+              leadership roles.
             </p>
           </div>
 
-          {/* Links */}
           <div className="md:col-span-4">
             <h3 className="text-sm font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="/employers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/employers"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   Employers
                 </a>
               </li>
               <li>
-                <a href="/candidates" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/candidates"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   Candidates
                 </a>
               </li>
               <li>
-                <a href="/sectors" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/sectors"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   Sectors
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/about"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="/contact"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   Contact
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="md:col-span-4">
             <h3 className="text-sm font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
@@ -96,16 +113,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Joist Recruitment. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <a href="/privacy" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="/privacy-policy"
+              className="text-xs text-muted-foreground hover:text-primary transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="/terms" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="/terms"
+              className="text-xs text-muted-foreground hover:text-primary transition-colors"
+            >
               Terms
             </a>
           </div>
