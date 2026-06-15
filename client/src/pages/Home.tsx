@@ -360,47 +360,50 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
+                slug: "skills-gap",
                 title: "The skills gap slowing UK project delivery",
                 excerpt:
                   "Delays across major UK infrastructure and housing programmes are increasingly linked to a shortage of experienced commercial and technical professionals, not just materials.",
               },
               {
+                slug: "cv-matching",
                 title:
                   "Why built environment hiring needs more than CV matching",
                 excerpt:
                   "Volume-based recruitment misses what matters most in construction and engineering roles: technical judgement, commercial awareness, and the ability to operate under delivery pressure.",
               },
               {
+                slug: "international-talent",
                 title:
                   "What international urban development conversations reveal about UK talent demand",
                 excerpt:
                   "Global built environment discussions at forums like the World Urban Forum consistently surface demand for UK-trained planning, design, and commercial expertise.",
               },
             ].map((insight, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div
-                  className={`p-8 bg-card border border-white/5 hover:border-primary/30 flex flex-col h-full ${CARD_HOVER}`}
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <Lightbulb className="w-4 h-4 text-primary" />
-                    <span className="text-xs text-primary font-medium uppercase tracking-wider">
-                      Insight
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-heading font-bold mb-3 leading-snug">
-                    {insight.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1">
-                    {insight.excerpt}
-                  </p>
-                  <div className="mt-6">
-                    <Link href="/insights">
+              <FadeIn key={insight.slug} delay={i * 0.1}>
+                <Link href={`/insights/${insight.slug}`}>
+                  <div
+                    className={`p-8 bg-card border border-white/5 hover:border-primary/30 flex flex-col h-full cursor-pointer ${CARD_HOVER}`}
+                  >
+                    <div className="flex items-center gap-2 mb-4">
+                      <Lightbulb className="w-4 h-4 text-primary" />
+                      <span className="text-xs text-primary font-medium uppercase tracking-wider">
+                        Insight
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-heading font-bold mb-3 leading-snug">
+                      {insight.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                      {insight.excerpt}
+                    </p>
+                    <div className="mt-6">
                       <span className="text-sm text-primary hover:text-primary/80 transition-colors flex items-center gap-1">
                         Read insight <ArrowRight className="w-3 h-3" />
                       </span>
-                    </Link>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </FadeIn>
             ))}
           </div>
