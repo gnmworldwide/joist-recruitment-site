@@ -39,7 +39,7 @@ export default function Candidates() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Salary & Rate Guidance</h3>
-                  <p className="text-muted-foreground text-sm">Access to real-time market data to ensure your compensation expectations are accurate and optimized.</p>
+                  <p className="text-muted-foreground text-sm">Access to real-time market data to ensure your compensation expectations are accurate and optimised.</p>
                 </div>
               </div>
               <div className="flex gap-4">
