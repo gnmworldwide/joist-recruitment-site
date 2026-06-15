@@ -17,7 +17,7 @@ export default function Employers() {
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             We help contractors, consultancies, and developers find the right
-            people for permanent, contract, and project-based roles — screened
+            people for permanent, contract, and project-based roles: screened
             properly, introduced directly, and supported through to placement.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function Employers() {
                     Structured qualification, relevance checks, and shortlist
                     preparation before introduction. Every submission includes
                     consultant notes detailing motivations and verified
-                    capabilities — we do not forward CVs blindly.
+                    capabilities. We do not forward CVs blindly.
                   </p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Employers() {
                 <div>
                   <h3 className="text-lg font-bold mb-1">Role Scoping Call</h3>
                   <p className="text-muted-foreground text-sm">
-                    We start every assignment with a direct conversation — to
+                    We start every assignment with a direct conversation to
                     understand the role, the team, the timeline, and whether
                     this is a permanent, contract, or interim requirement. No
                     guesswork.

@@ -1,4 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Linkedin } from "lucide-react";
 import founderPhoto from "@/assets/guy-nkona-headshot.jpg";
 
@@ -28,8 +29,8 @@ export default function About() {
               within the UK built environment. We combine tech-enabled sourcing
               methodologies with deep, traditional networking to surface passive
               talent that job boards and volume agencies miss. Our approach is
-              qualitative: we focus on fit, capability, and long-term value —
-              not throughput.
+              qualitative: we focus on fit, capability, and long-term value.
+              Not throughput.
             </p>
           </div>
 
@@ -63,39 +64,31 @@ export default function About() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-24">
-          <div className="border-t-2 border-primary pt-6">
-            <h3 className="text-xl font-heading font-bold mb-4">
-              Mission-Driven
-            </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              To raise the standard of recruitment within the built environment
-              by providing transparent, accurate, and genuinely professional
-              representation to both clients and candidates. Less friction. More
-              rigour.
-            </p>
-          </div>
-          <div className="border-t-2 border-primary pt-6">
-            <h3 className="text-xl font-heading font-bold mb-4">
-              Structural Focus
-            </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              We do not rely on job boards. We use systematic market mapping,
-              competitor analysis, and targeted outreach to find professionals
-              who are not actively looking but are open to the right
-              opportunity. The search is structured, not speculative.
-            </p>
-          </div>
-          <div className="border-t-2 border-primary pt-6">
-            <h3 className="text-xl font-heading font-bold mb-4">
-              Market Presence
-            </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              UK-focused, with bespoke international support where UK-based
-              built environment expertise is required. Our primary operational
-              footprint is the UK market; international mandates are accepted
-              selectively, for strategic partners with specific requirements.
-            </p>
-          </div>
+          {[
+            {
+              title: "Mission-Driven",
+              body: "To raise the standard of recruitment within the built environment by providing transparent, accurate, and genuinely professional representation to both clients and candidates. Less friction. More rigour.",
+            },
+            {
+              title: "Structural Focus",
+              body: "We do not rely on job boards. We use systematic market mapping, competitor analysis, and targeted outreach to find professionals who are not actively looking but are open to the right opportunity. The search is structured, not speculative.",
+            },
+            {
+              title: "Market Presence",
+              body: "UK-focused, with bespoke international support where UK-based built environment expertise is required. Our primary operational footprint is the UK market; international mandates are accepted selectively, for strategic partners with specific requirements.",
+            },
+          ].map((pillar, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+              <div className="border-t-2 border-primary pt-6">
+                <h3 className="text-xl font-heading font-bold mb-4">
+                  {pillar.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {pillar.body}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
         </div>
       </div>
     </PageLayout>

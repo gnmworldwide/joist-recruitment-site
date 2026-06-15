@@ -86,7 +86,7 @@ export default function Contact() {
               {/* TODO: add Calendly URL to the href below */}
               <a
                 href="mailto:hello@joistrecruitment.co.uk?subject=Book%20a%20Call"
-                aria-label="Book a call — email to arrange"
+                aria-label="Book a call, email us to arrange a time"
               >
                 <Button
                   variant="outline"

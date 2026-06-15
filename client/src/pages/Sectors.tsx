@@ -1,4 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Target, HardHat, Cog, PenTool, ClipboardList, Building2, ArrowRight } from "lucide-react";
@@ -10,7 +11,7 @@ export default function Sectors() {
       description="Specialist built environment recruitment across quantity surveying, construction delivery, architecture, engineering, project management, and MEP in the UK."
     >
       <div className="container mx-auto px-6 py-20">
-        <div className="max-w-4xl mb-20">
+        <FadeIn className="max-w-4xl mb-20">
           <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
             Focused <span className="text-primary">Expertise</span>.
           </h1>
@@ -19,10 +20,11 @@ export default function Sectors() {
             approach means we understand the technical pressures of the roles we
             place and the commercial realities of the businesses we serve.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="space-y-24">
           {/* Primary Sector */}
+          <FadeIn>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 bg-card border border-white/5 p-12 relative overflow-hidden h-full flex flex-col justify-center">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -35,7 +37,7 @@ export default function Sectors() {
                 consultancies, main contractors, and developers to place elite
                 commercial talent. We understand the difference between
                 pre-contract measurement, post-contract delivery, and strategic
-                commercial management — and we recruit for all three.
+                commercial management, and we recruit for all three.
               </p>
             </div>
             <div className="lg:col-span-7">
@@ -64,8 +66,10 @@ export default function Sectors() {
               </div>
             </div>
           </div>
+          </FadeIn>
 
           {/* Construction Delivery */}
+          <FadeIn>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 order-2 lg:order-1">
               <h3 className="text-xl font-bold mb-6 border-b border-white/10 pb-4">
@@ -101,13 +105,15 @@ export default function Sectors() {
               <p className="text-muted-foreground relative z-10">
                 Operational leadership is critical to project success. We source
                 professionals who drive site safety, programme adherence, and
-                quality from groundworks to handover — across both permanent and
+                quality from groundworks to handover, across both permanent and
                 contract engagements.
               </p>
             </div>
           </div>
+          </FadeIn>
 
           {/* Architecture & Design */}
+          <FadeIn>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 bg-card border border-white/5 p-12 relative overflow-hidden h-full flex flex-col justify-center">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -145,8 +151,10 @@ export default function Sectors() {
               </div>
             </div>
           </div>
+          </FadeIn>
 
           {/* Engineering & Technical */}
+          <FadeIn>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 order-2 lg:order-1">
               <h3 className="text-xl font-bold mb-6 border-b border-white/10 pb-4">
@@ -184,8 +192,10 @@ export default function Sectors() {
               </p>
             </div>
           </div>
+          </FadeIn>
 
           {/* Project Management */}
+          <FadeIn>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 bg-card border border-white/5 p-12 relative overflow-hidden h-full flex flex-col justify-center">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -196,7 +206,7 @@ export default function Sectors() {
               <p className="text-muted-foreground relative z-10">
                 Programme delivery, client-side management, and development
                 management roles. We understand the commercial accountability
-                and stakeholder pressure these positions carry — and we look for
+                and stakeholder pressure these positions carry, and we look for
                 candidates with both.
               </p>
             </div>
@@ -223,8 +233,10 @@ export default function Sectors() {
               </div>
             </div>
           </div>
+          </FadeIn>
 
           {/* MEP & Technical Services */}
+          <FadeIn>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 order-2 lg:order-1">
               <h3 className="text-xl font-bold mb-6 border-b border-white/10 pb-4">
@@ -257,15 +269,16 @@ export default function Sectors() {
               <p className="text-muted-foreground relative z-10">
                 Specialist technical sourcing for mechanical and electrical
                 disciplines. Connecting complex engineering talent with
-                specialist sub-contractors and tier-one MEP divisions — for
+                specialist sub-contractors and tier-one MEP divisions, for
                 both permanent and contract requirements.
               </p>
             </div>
           </div>
+          </FadeIn>
         </div>
 
         {/* Salary Snapshot */}
-        <div className="mt-32">
+        <FadeIn className="mt-32">
           <div className="mb-10">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
               Market Salary{" "}
@@ -274,7 +287,7 @@ export default function Sectors() {
             <p className="text-muted-foreground max-w-2xl leading-relaxed">
               Indicative UK salary ranges by discipline. Figures vary by
               region, employer type, project size, package structure, and
-              market conditions — and should be reviewed regularly. Contract
+              market conditions, and should be reviewed regularly. Contract
               day rates are not shown here; contact us for current benchmarks.
             </p>
             <p className="text-xs text-muted-foreground/60 mt-2">
@@ -358,7 +371,7 @@ export default function Sectors() {
           </div>
           {/* TODO: verify salary figures against current market data before each site update */}
           {/* TODO: add contract day rate benchmarks section */}
-        </div>
+        </FadeIn>
 
         <div className="mt-24 text-center">
           <h3 className="text-2xl font-bold mb-6">
