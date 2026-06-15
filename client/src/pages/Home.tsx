@@ -10,6 +10,11 @@ import {
   ShieldCheck,
   Target,
   TrendingUp,
+  HardHat,
+  Cog,
+  PenTool,
+  ClipboardList,
+  Lightbulb,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
 
@@ -37,10 +42,18 @@ export default function Home() {
               Precision Recruitment for the{" "}
               <span className="text-primary block">Built Environment.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-              Quantity Surveying leadership & broader construction capability.
-              We connect tier-one talent with industry-leading firms through
-              structured, tech-enabled sourcing.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl leading-relaxed">
+              Joist helps UK construction, architecture, engineering, and
+              development teams find reliable talent across permanent, contract,
+              and project-based roles.
+            </p>
+            <p className="text-base text-muted-foreground/80 mb-3 max-w-2xl">
+              Founder-led, sector-focused, and powered by structured sourcing
+              systems.
+            </p>
+            <p className="text-sm text-muted-foreground/60 mb-10 max-w-2xl">
+              UK-focused, with bespoke international support where UK expertise
+              is required.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -65,11 +78,15 @@ export default function Home() {
             <div className="mt-16 flex flex-wrap gap-6 text-sm font-medium text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-primary" />
+                <span>Founder-Led</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary" />
                 <span>Tech-Enabled Sourcing</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-primary" />
-                <span>Deep Market Insight</span>
+                <span>Permanent &amp; Contract</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-primary" />
@@ -88,37 +105,76 @@ export default function Home() {
               Core <span className="text-primary">Sectors</span>.
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Specialist focus ensuring deep network penetration and rapid
-              delivery of high-impact personnel.
+              Deep sector knowledge across the disciplines that drive UK built
+              environment delivery.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 bg-background border border-white/5 group hover:border-primary/50 transition-colors">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Primary sector */}
+            <div className="p-8 bg-background border border-primary/30 group hover:border-primary transition-colors">
               <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-2xl font-heading font-bold mb-4">
-                Quantity Surveying
+              <h3 className="text-xl font-heading font-bold mb-3">
+                Quantity Surveying &amp; Commercial
               </h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground text-sm mb-4">
                 Our primary vertical. From Project QS to Commercial Directors,
-                we map the entire UK market to deliver exceptional commercial
-                talent to consultancies, developers, and contractors.
+                we map the entire UK market for consultancies, developers, and
+                contractors.
               </p>
-              <ul className="space-y-2 mb-8">
-                <li className="flex items-center gap-2 text-sm">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Senior & Managing QS
-                </li>
-                <li className="flex items-center gap-2 text-sm">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Cost Managers & Estimators
-                </li>
-                <li className="flex items-center gap-2 text-sm">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Commercial Directors
-                </li>
+              <ul className="space-y-1.5">
+                {["Senior &amp; Managing QS", "Cost Managers &amp; Estimators", "Commercial Directors"].map((r) => (
+                  <li key={r} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                    <span dangerouslySetInnerHTML={{ __html: r }} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="p-8 bg-background border border-white/5 group hover:border-primary/50 transition-colors">
+              <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6">
+                <HardHat className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-heading font-bold mb-3">
+                Construction Delivery &amp; Site Management
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Operational leadership for projects under pressure. We source
+                professionals who deliver site safety, programme adherence, and
+                quality from groundworks to handover.
+              </p>
+              <ul className="space-y-1.5">
+                {["Site Managers", "Contracts Managers", "Construction Directors"].map((r) => (
+                  <li key={r} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="p-8 bg-background border border-white/5 group hover:border-primary/50 transition-colors">
+              <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6">
+                <PenTool className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-heading font-bold mb-3">
+                Architecture &amp; Design
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                From RIBA-chartered architects to BIM specialists and design
+                managers. We support practices and in-house design teams at
+                every stage of a project.
+              </p>
+              <ul className="space-y-1.5">
+                {["Architects (Part II / III)", "Design Managers", "BIM Coordinators"].map((r) => (
+                  <li key={r} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                    {r}
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -126,29 +182,76 @@ export default function Home() {
               <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6">
                 <Building2 className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-2xl font-heading font-bold mb-4">
-                Engineering & Construction
+              <h3 className="text-xl font-heading font-bold mb-3">
+                Engineering &amp; Technical
               </h3>
-              <p className="text-muted-foreground mb-6">
-                Secondary but robust capability across technical and operational
-                delivery roles, supporting the full project lifecycle with
-                rigorously vetted professionals.
+              <p className="text-muted-foreground text-sm mb-4">
+                Structural, civil, and multi-disciplinary engineering capability
+                supporting the full project lifecycle with rigorously vetted
+                professionals.
               </p>
-              <ul className="space-y-2 mb-8">
-                <li className="flex items-center gap-2 text-sm">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Site & Project Managers
-                </li>
-                <li className="flex items-center gap-2 text-sm">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Mechanical & Electrical Engineers
-                </li>
-                <li className="flex items-center gap-2 text-sm">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  BIM Coordinators
-                </li>
+              <ul className="space-y-1.5">
+                {["Structural Engineers", "Civil Engineers", "Planners"].map((r) => (
+                  <li key={r} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                    {r}
+                  </li>
+                ))}
               </ul>
             </div>
+
+            <div className="p-8 bg-background border border-white/5 group hover:border-primary/50 transition-colors">
+              <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6">
+                <ClipboardList className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-heading font-bold mb-3">
+                Project Management
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Programme delivery, client-side management, and development
+                management roles. We understand the commercial accountability
+                these positions carry.
+              </p>
+              <ul className="space-y-1.5">
+                {["Project Managers", "Programme Managers", "Development Managers"].map((r) => (
+                  <li key={r} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="p-8 bg-background border border-white/5 group hover:border-primary/50 transition-colors">
+              <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6">
+                <Cog className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-heading font-bold mb-3">
+                Building Services &amp; MEP
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Specialist technical sourcing for mechanical and electrical
+                disciplines. Complex engineering talent for specialist
+                sub-contractors and tier-one MEP divisions.
+              </p>
+              <ul className="space-y-1.5">
+                {["MEP Project Managers", "M&E Estimators", "Building Services Engineers"].map((r) => (
+                  <li key={r} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link href="/sectors">
+              <Button variant="outline" className="border-white/20 text-white hover:bg-white/5 rounded-none">
+                View all sectors
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -180,18 +283,18 @@ export default function Home() {
                 {[
                   {
                     title: "Role Scoping",
-                    desc: "Deep dive into technical requirements, commercial objectives, and cultural fit.",
+                    desc: "We clarify your requirements, timeline, and whether the role is permanent, contract, or project-based — then align commercial expectations before search begins.",
                   },
                   {
                     title: "Structured Search",
-                    desc: "Utilization of tech-enabled mapping and exclusive networks to identify passive talent.",
+                    desc: "Tech-enabled market mapping and exclusive networks to identify passive talent across the UK built environment.",
                   },
                   {
                     title: "Screened Shortlist",
-                    desc: "Delivery of fully vetted candidates with comprehensive profiles and market data.",
+                    desc: "Delivery of fully vetted candidates with comprehensive profiles and relevant market data.",
                   },
                   {
-                    title: "Placement & Follow-up",
+                    title: "Placement &amp; Follow-up",
                     desc: "Offer management, onboarding support, and post-placement reviews.",
                   },
                 ].map((step, i) => (
@@ -200,10 +303,8 @@ export default function Home() {
                       {i + 1}
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold mb-2">{step.title}</h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {step.desc}
-                      </p>
+                      <h4 className="text-lg font-bold mb-2" dangerouslySetInnerHTML={{ __html: step.title }} />
+                      <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: step.desc }} />
                     </div>
                   </div>
                 ))}
@@ -223,19 +324,19 @@ export default function Home() {
                 {[
                   {
                     title: "Intake",
-                    desc: "Confidential consultation regarding your experience, aspirations, and market value.",
+                    desc: "Confidential discussion about your experience, aspirations, and market value — permanent, contract, or both.",
                   },
                   {
                     title: "Matching",
-                    desc: "Targeted introduction to unadvertised roles and tier-one firms aligning with your goals.",
+                    desc: "Targeted introduction to unadvertised roles and organisations that align with your goals.",
                   },
                   {
                     title: "Prep",
-                    desc: "Rigorous interview preparation, project portfolio structuring, and strategic advice.",
+                    desc: "Interview preparation, CV structuring, and practical advice on positioning your experience.",
                   },
                   {
-                    title: "Offer & Onboarding",
-                    desc: "Contract negotiation, resignation strategy, and seamless transition support.",
+                    title: "Offer &amp; Onboarding",
+                    desc: "Contract negotiation, resignation support, and a smooth transition into your next role.",
                   },
                 ].map((step, i) => (
                   <div key={i} className="relative flex items-start gap-6">
@@ -243,10 +344,8 @@ export default function Home() {
                       {i + 1}
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold mb-2">{step.title}</h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {step.desc}
-                      </p>
+                      <h4 className="text-lg font-bold mb-2" dangerouslySetInnerHTML={{ __html: step.title }} />
+                      <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: step.desc }} />
                     </div>
                   </div>
                 ))}
@@ -268,7 +367,7 @@ export default function Home() {
               <p className="text-muted-foreground text-sm">
                 We don&apos;t forward CVs; we present validated professionals.
                 Every candidate undergoes rigorous technical and commercial
-                qualification.
+                qualification before introduction.
               </p>
             </div>
 
@@ -278,8 +377,9 @@ export default function Home() {
                 Market Insight
               </h3>
               <p className="text-muted-foreground text-sm">
-                Real-time data on compensation trends, project pipelines, and
-                competitor movements within the UK Built Environment.
+                Real-time data on salary trends, project pipelines, and
+                competitive movements within the UK built environment — useful
+                for both hiring decisions and career choices.
               </p>
             </div>
 
@@ -293,6 +393,80 @@ export default function Home() {
                 long-term partnerships, not transactional interactions.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Insights Preview */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
+              Joist <span className="text-primary">Insights</span>.
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl">
+              Hiring trends, project pressures, skills gaps, and built
+              environment conversations shaping the UK market.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "The skills gap slowing UK project delivery",
+                excerpt:
+                  "Delays across major UK infrastructure and housing programmes are increasingly linked to a shortage of experienced commercial and technical professionals, not just materials.",
+              },
+              {
+                title:
+                  "Why built environment hiring needs more than CV matching",
+                excerpt:
+                  "Volume-based recruitment misses what matters most in construction and engineering roles: technical judgement, commercial awareness, and the ability to operate under delivery pressure.",
+              },
+              {
+                title:
+                  "What international urban development conversations reveal about UK talent demand",
+                excerpt:
+                  "Global built environment discussions at forums like the World Urban Forum consistently surface demand for UK-trained planning, design, and commercial expertise.",
+              },
+            ].map((insight, i) => (
+              <div
+                key={i}
+                className="p-8 bg-card border border-white/5 hover:border-primary/30 transition-colors flex flex-col"
+              >
+                <div className="flex items-center gap-2 mb-4">
+                  <Lightbulb className="w-4 h-4 text-primary" />
+                  <span className="text-xs text-primary font-medium uppercase tracking-wider">
+                    Insight
+                  </span>
+                </div>
+                <h3 className="text-lg font-heading font-bold mb-3 leading-snug">
+                  {insight.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                  {insight.excerpt}
+                </p>
+                <div className="mt-6">
+                  <Link href="/insights">
+                    <span className="text-sm text-primary hover:text-primary/80 transition-colors flex items-center gap-1">
+                      Read insight <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link href="/insights">
+              <Button
+                variant="outline"
+                className="border-white/20 text-white hover:bg-white/5 rounded-none"
+              >
+                View all insights
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -329,20 +503,20 @@ export default function Home() {
 
       {/* CTA Banner */}
       <section className="py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay" />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
-            Ready to secure your next asset?
+            Ready to secure your next hire?
           </h2>
           <p className="text-primary-foreground/80 text-xl mb-10 max-w-2xl mx-auto">
-            Whether you are building a team or advancing your career, partner
-            with the specialists.
+            Whether you are building a team or advancing your career, speak to
+            the specialists.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/employers">
               <Button className="h-14 px-8 text-lg bg-black hover:bg-black/80 text-white rounded-none w-full sm:w-auto">
-                Client Enquiry
+                Send a Hiring Brief
               </Button>
             </Link>
 
