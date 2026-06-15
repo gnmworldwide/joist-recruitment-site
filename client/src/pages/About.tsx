@@ -40,7 +40,7 @@ export default function About() {
               <img
                 src={founderPhoto}
                 alt="Guy Nkona, founder of Joist Recruitment"
-                className="w-full h-[500px] object-cover object-top border border-white/5"
+                className="w-full h-[500px] object-cover object-[center_20%] border border-white/5"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                 <p className="text-white font-semibold">Guy Nkona</p>
