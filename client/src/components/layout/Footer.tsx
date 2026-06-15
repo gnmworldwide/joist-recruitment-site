@@ -102,11 +102,12 @@ export default function Footer() {
               </li>
             </ul>
 
-            {/* TODO: add Joist LinkedIn company page URL to the href below */}
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="#"
-                aria-label="Connect with Joist on LinkedIn"
+                href="https://www.linkedin.com/company/joist-recruitment-ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Joist Recruitment on LinkedIn"
                 className="p-2 border border-white/10 hover:border-primary rounded-none transition-colors"
               >
                 <Linkedin className="w-4 h-4" />

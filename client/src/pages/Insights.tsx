@@ -87,10 +87,10 @@ export default function Insights() {
             LinkedIn and Substack. Follow Joist to stay across hiring trends
             and market developments in the UK built environment.
           </p>
-          {/* TODO: add LinkedIn company page URL */}
           <a
-            href="#"
-            aria-label="Follow Joist on LinkedIn (link to be added)"
+            href="https://www.linkedin.com/company/joist-recruitment-ltd/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
           >
             Follow Joist on LinkedIn <ArrowRight className="w-4 h-4" />

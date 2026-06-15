@@ -1,4 +1,6 @@
 import PageLayout from "@/components/layout/PageLayout";
+import { Linkedin } from "lucide-react";
+import founderPhoto from "@/assets/guy-nkona-headshot.jpg";
 
 export default function About() {
   return (
@@ -33,24 +35,28 @@ export default function About() {
 
           <div className="relative">
             <div className="absolute -inset-4 border border-white/10 bg-card/50 translate-x-4 translate-y-4" />
-            {/* TODO: replace with founder headshot (professional photo) */}
-            <div
-              className="relative z-10 w-full h-[500px] bg-card border border-white/10 flex flex-col items-center justify-center gap-4"
-              role="img"
-              aria-label="Guy Nkona, founder of Joist Recruitment"
-            >
-              <div className="w-24 h-24 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
-                <span className="text-3xl font-heading font-bold text-primary">
-                  GN
-                </span>
-              </div>
-              <div className="text-center px-8">
-                <p className="text-white font-semibold mb-1">
-                  Guy Nkona
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Founder, Joist Recruitment
-                </p>
+            <div className="relative z-10">
+              <img
+                src={founderPhoto}
+                alt="Guy Nkona, founder of Joist Recruitment"
+                className="w-full h-[500px] object-cover object-top border border-white/5"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <p className="text-white font-semibold">Guy Nkona</p>
+                <div className="flex items-center justify-between mt-1">
+                  <p className="text-sm text-muted-foreground">
+                    Founder, Joist Recruitment
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/guy-nkona-888a84165"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Connect with Guy Nkona on LinkedIn"
+                    className="p-1.5 border border-white/20 hover:border-primary rounded-none transition-colors"
+                  >
+                    <Linkedin className="w-3.5 h-3.5 text-white/70" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
