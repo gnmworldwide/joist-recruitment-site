@@ -14,7 +14,7 @@ export default function About() {
             </h1>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Joist is founded and led by{" "}
-              <strong className="text-white">Guy Nkona Mukulayenge</strong>,
+              <strong className="text-white">Guy Nkona</strong>,
               whose background in architecture, urban development planning, and
               housing gives the business a practical understanding of how built
               environment teams operate. Joist was created to bring more
@@ -37,7 +37,7 @@ export default function About() {
             <div
               className="relative z-10 w-full h-[500px] bg-card border border-white/10 flex flex-col items-center justify-center gap-4"
               role="img"
-              aria-label="Guy Nkona Mukulayenge, founder of Joist Recruitment"
+              aria-label="Guy Nkona, founder of Joist Recruitment"
             >
               <div className="w-24 h-24 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
                 <span className="text-3xl font-heading font-bold text-primary">
@@ -46,7 +46,7 @@ export default function About() {
               </div>
               <div className="text-center px-8">
                 <p className="text-white font-semibold mb-1">
-                  Guy Nkona Mukulayenge
+                  Guy Nkona
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Founder, Joist Recruitment
