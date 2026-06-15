@@ -99,9 +99,11 @@ export default function Candidates() {
                   <select name="sector" className="flex h-10 w-full rounded-none border border-white/10 bg-background/50 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
                     <option value="" className="bg-black">Select...</option>
                     <option value="QS / Commercial" className="bg-black">Quantity Surveying / Commercial</option>
-                    <option value="Engineering" className="bg-black">Engineering</option>
-                    <option value="MEP" className="bg-black">MEP</option>
-                    <option value="Site Management" className="bg-black">Site Management</option>
+                    <option value="Construction Delivery / Site Management" className="bg-black">Construction Delivery / Site Management</option>
+                    <option value="Architecture / Design" className="bg-black">Architecture / Design</option>
+                    <option value="Engineering / Technical" className="bg-black">Engineering / Technical</option>
+                    <option value="Project Management" className="bg-black">Project Management</option>
+                    <option value="MEP / Building Services" className="bg-black">MEP / Building Services</option>
                     <option value="Other" className="bg-black">Other</option>
                   </select>
                 </div>

@@ -83,10 +83,10 @@ export default function Contact() {
                 Find a time that works for you in our calendar.
               </p>
 
-              {/* Calendly placeholder: replace href later */}
+              {/* TODO: add Calendly URL to the href below */}
               <a
-                href="#"
-                aria-label="Book a call (Calendly link to be added)"
+                href="mailto:hello@joistrecruitment.co.uk?subject=Book%20a%20Call"
+                aria-label="Book a call — email to arrange"
               >
                 <Button
                   variant="outline"
@@ -95,9 +95,8 @@ export default function Contact() {
                   Book a Call
                 </Button>
               </a>
-
               <p className="text-xs text-muted-foreground mt-3">
-                (Replace this link with your Calendly URL in Contact.tsx)
+                Email us to arrange a convenient time.
               </p>
             </div>
           </div>
@@ -208,8 +207,7 @@ export default function Contact() {
               </Button>
 
               <p className="text-xs text-muted-foreground mt-3">
-                Form powered by Formspree. Replace the action URL with your real
-                Formspree endpoint.
+                We aim to respond within one business day.
               </p>
             </form>
           </div>
