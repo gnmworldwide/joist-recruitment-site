@@ -11,6 +11,7 @@ import Candidates from "@/pages/Candidates";
 import Sectors from "@/pages/Sectors";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import Insights from "@/pages/Insights";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import Terms from "@/pages/Terms";
 import ThankYou from "./pages/ThankYou";
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/sectors" component={Sectors} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/insights" component={Insights} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms" component={Terms} />
       <Route path="/thank-you" component={ThankYou} />
