@@ -3,8 +3,24 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Briefcase, Clock, Phone, Search, Star, Users } from "lucide-react";
+import { useLocation } from "wouter";
+import { submitNetlifyForm } from "@/lib/netlifyForms";
 
 export default function Employers() {
+  const [, navigate] = useLocation();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const ok = await submitNetlifyForm(e.currentTarget);
+    if (ok) {
+      navigate("/thank-you");
+    } else {
+      alert(
+        "Sorry, something went wrong sending your enquiry. Please email hello@joistrecruitment.co.uk.",
+      );
+    }
+  };
+
   return (
     <PageLayout
       title="For Employers | Joist Recruitment"
@@ -139,6 +155,7 @@ export default function Employers() {
               action="/thank-you"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
               className="space-y-4"
             >
               <input type="hidden" name="form-name" value="register-vacancy" />

@@ -3,8 +3,24 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useLocation } from "wouter";
+import { submitNetlifyForm } from "@/lib/netlifyForms";
 
 export default function Contact() {
+  const [, navigate] = useLocation();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const ok = await submitNetlifyForm(e.currentTarget);
+    if (ok) {
+      navigate("/thank-you");
+    } else {
+      alert(
+        "Sorry, something went wrong sending your message. Please email hello@joistrecruitment.co.uk.",
+      );
+    }
+  };
+
   return (
     <PageLayout
       title="Contact Us | Joist Recruitment"
@@ -113,6 +129,7 @@ export default function Contact() {
               action="/thank-you"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
               className="space-y-4"
             >
               {/* Netlify Forms: identifies which form this submission belongs to */}
