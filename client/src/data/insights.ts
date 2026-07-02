@@ -4,9 +4,47 @@ export interface Insight {
   tag: string;
   excerpt: string;
   body: string[];
+  source?: { essayTitle: string; url: string };
 }
 
 export const insights: Insight[] = [
+  {
+    slug: "energy-transition-workforce",
+    title: "The workforce behind the energy transition",
+    tag: "Market Insight",
+    excerpt:
+      "Britain's clean power build-out is, underneath, a hiring problem. The grid upgrades and connections the country is counting on depend on tens of thousands of skilled trades the current pipeline is not producing. We look at the numbers and what they mean for hiring.",
+    body: [
+      "Britain's energy debate is usually framed around fuel and targets. The harder constraint sits further down the chain. Every gigawatt of new generation, every mile of grid reinforcement, and every substation has to be physically built by someone, and the people who build it are in short supply.",
+      "The scale of demand is significant. The government's Green Jobs Delivery Group has set a goal of supporting up to 480,000 skilled green jobs by 2030, and National Grid alone expects to support more than 55,000 additional UK jobs by the end of the decade. These are not abstract figures. They represent roles that have to be filled against a timetable set by national infrastructure commitments.",
+      "The pressure is sharpest in the electrical trades. Industry analyses estimate the sector may need in the order of 230,000 additional electricians by 2030 to meet demand, while losing a net 5,000 to 10,000 a year to retirement and attrition. The exact figure is contestable, but the direction is not: demand is rising quickly against a workforce that is thinning at the experienced end.",
+      "The specific roles matter more than the headline count. Connecting clean power at scale depends on cable jointers, high-voltage linesmen, and substation engineers, alongside the project and commercial staff who hold a programme together. These are not roles that can be trained in months, and they are exactly the roles where a reformed connection queue and a funded grid programme still stall without the people to execute them.",
+      "For employers, the practical takeaway is that this is a structural shortage for the rest of the decade, not a temporary shortfall. Firms bidding for grid, renewable, and wider infrastructure work are competing for the same limited pool of experienced trades and technical staff, and that competition intensifies as more projects clear the connection queue at once.",
+      "The advantage goes to firms that treat hiring for these delivery-critical roles as planned, ongoing work rather than a reactive scramble once a contract is won. Knowing where the genuinely experienced people are, and building relationships with them before the role is live, is increasingly the difference between a programme that stays on schedule and one that waits on the people to deliver it.",
+    ],
+    source: {
+      essayTitle: "Britain's Energy Security Problem",
+      url: "https://guynkona.substack.com/p/britains-energy-security-problem",
+    },
+  },
+  {
+    slug: "commonwealth-built-environment-talent",
+    title: "Where Britain's built environment talent comes from",
+    tag: "Global Perspective",
+    excerpt:
+      "UK construction and engineering already depend on internationally trained professionals, many from across the Commonwealth. For firms struggling to fill experienced roles, understanding these talent flows is becoming part of a serious hiring strategy.",
+    body: [
+      "When firms talk about the skills shortage in construction and engineering, the conversation usually stays inside the UK labour market. It is worth widening the frame. A significant share of the experienced professionals already working in British construction, engineering, and the wider built environment trained or built their careers abroad, and a large part of that flow comes from across the Commonwealth.",
+      "The pattern is long established. Skilled professionals from countries such as Nigeria, Ghana, Kenya, India, and across the Caribbean often train to shared academic and professional standards, gain experience in the UK, Canada, or Australia, and build their careers there. The result is that UK construction and engineering, like the health service and parts of financial and legal services, quietly rely on internationally trained talent to fill roles the domestic pipeline does not supply in sufficient numbers.",
+      "A shared legal and professional heritage makes this pool more accessible than it first appears. Common language, compatible qualifications, and familiar commercial and contractual norms mean an engineer or project professional trained in Nairobi, Accra, or Kuala Lumpur can often adapt to UK delivery conditions faster than the distance suggests. These are people who understand planning frameworks, complex stakeholder environments, and delivery under tight commercial constraints.",
+      "This cuts two ways for employers. It points to a wider candidate pool than a UK-only search assumes, particularly for mid to senior roles where experience matters more than proximity. It is also a retention signal: strong professionals at that level increasingly have international options, so the firms that keep them are the ones offering scope and seriousness, not only salary.",
+      "The practical takeaway is not that firms should look abroad instead of at home. It is that a serious hiring strategy for hard to fill built environment roles treats internationally trained talent, and Commonwealth-trained talent in particular, as part of the picture rather than an afterthought, and understands the routes, recognition, and relationships that make those hires work.",
+    ],
+    source: {
+      essayTitle: "The Commonwealth's Missing Architecture",
+      url: "https://guynkona.substack.com/p/the-commonwealths-missing-architecture",
+    },
+  },
   {
     slug: "skills-gap",
     title: "The skills gap slowing UK project delivery",

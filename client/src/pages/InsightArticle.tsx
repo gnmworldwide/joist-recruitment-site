@@ -59,6 +59,27 @@ export default function InsightArticle() {
           </div>
         </FadeIn>
 
+        {/* Source essay (Substack) */}
+        {insight.source && (
+          <FadeIn className="max-w-3xl mt-16 pt-10 border-t border-white/10" delay={0.12}>
+            <p className="text-sm text-muted-foreground mb-4">
+              This insight draws on{" "}
+              <span className="text-white font-medium">
+                {insight.source.essayTitle}
+              </span>
+              , published in The Blueprint.
+            </p>
+            <a
+              href={insight.source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+            >
+              Read the full essay <ArrowRight className="w-4 h-4" />
+            </a>
+          </FadeIn>
+        )}
+
         {/* CTA */}
         <FadeIn className="max-w-3xl mt-16 pt-10 border-t border-white/10" delay={0.15}>
           <p className="text-sm text-muted-foreground mb-6">
