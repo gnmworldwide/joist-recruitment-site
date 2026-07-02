@@ -38,7 +38,7 @@ This will generate a `dist/public` folder containing all the static HTML/CSS/JS 
 
 ### Brand Colors & Details
 - To change the Burnt Orange accent color, open `client/src/index.css` and update the `--primary` HSL value.
-- To update the email (`hello@joistrecruitment.co.uk`) and phone number (`+44 7563 581741`), search for them in the components (mostly in `Footer.tsx`, `Navbar.tsx`, and `Contact.tsx`).
+- To update the email (`hello@joistrecruitment.co.uk`) and phone number (`+44 7873 965178`), search for them in the components (mostly in `Footer.tsx`, `Navbar.tsx`, and `Contact.tsx`).
 
 ### Formspree Endpoint
 The forms currently use a placeholder endpoint. To receive emails:

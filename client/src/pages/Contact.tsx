@@ -47,7 +47,7 @@ export default function Contact() {
 
                 {/* Phone */}
                 <a
-                  href="tel:+447563581741"
+                  href="tel:+447873965178"
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-12 h-12 bg-card border border-white/5 flex items-center justify-center group-hover:border-primary transition-colors">
@@ -56,7 +56,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
                     <p className="font-medium group-hover:text-primary transition-colors">
-                      +44 7563 581741
+                      +44 7873 965178
                     </p>
                   </div>
                 </a>
