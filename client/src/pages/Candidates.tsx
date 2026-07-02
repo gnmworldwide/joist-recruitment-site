@@ -67,8 +67,21 @@ export default function Candidates() {
             <h2 className="text-2xl font-heading font-bold mb-2">Submit Your Details</h2>
             <p className="text-sm text-muted-foreground mb-6">Register your interest below for a confidential discussion.</p>
             
-            <form action="https://formspree.io/f/mreadrpw"    method="POST" className="space-y-4">
-              <input type="hidden" name="_redirect" value="https://joistrecruitment.co.uk/thank-you" />
+            <form
+              name="candidate-profile"
+              method="POST"
+              action="/thank-you"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              encType="multipart/form-data"
+              className="space-y-4"
+            >
+              <input type="hidden" name="form-name" value="candidate-profile" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white/80">Full Name *</label>
                 <Input name="name" required className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary" />
@@ -131,11 +144,10 @@ export default function Candidates() {
               </div>
 
               <div className="bg-primary/10 border border-primary/20 p-4 text-sm text-primary-foreground/80 my-4">
-                <strong>Note on CVs:</strong> If your browser supports it, you may attach a file via the form provider. Alternatively, please submit this form and email your CV to <a href="mailto:hello@joistrecruitment.co.uk" className="text-primary hover:underline">hello@joistrecruitment.co.uk</a>.
+                <strong>Note on CVs:</strong> You can attach your CV below (PDF or Word). If you’d rather not, submit the form and email your CV to <a href="mailto:hello@joistrecruitment.co.uk" className="text-primary hover:underline">hello@joistrecruitment.co.uk</a>.
               </div>
 
-              {/* Formspree supports file uploads if enabled on paid plans, otherwise user emails it. 
-                  Leaving file input here; it will be ignored by Formspree free tier, hence the note above. */}
+              {/* CV file upload is captured by Netlify Forms (see multipart/form-data on the <form>). */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white/80">Upload CV (Optional)</label>
                 <Input type="file" name="cv_upload" accept=".pdf,.doc,.docx" className="bg-background/50 border-white/10 rounded-none focus-visible:ring-primary py-2 text-muted-foreground file:bg-primary file:text-white file:border-0 file:mr-4 file:px-4 file:py-1 file:text-xs hover:file:bg-primary/90" />

@@ -134,15 +134,19 @@ export default function Employers() {
               Register a Vacancy
             </h2>
             <form
-              action="https://formspree.io/f/mwvnzalj"
+              name="register-vacancy"
               method="POST"
+              action="/thank-you"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
               className="space-y-4"
             >
-              <input
-                type="hidden"
-                name="_redirect"
-                value="https://joistrecruitment.co.uk/thank-you"
-              />
+              <input type="hidden" name="form-name" value="register-vacancy" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white/80">

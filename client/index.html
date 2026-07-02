@@ -28,6 +28,56 @@ o.onload=function(){window.trackingFunctions.onLoad({appId:"6a14297531bae8000c7e
 document.head.appendChild(o)}initApollo();</script>
   <body class="dark bg-background text-foreground">
     <div id="root"></div>
+
+    <!--
+      Netlify Forms detection stubs. Netlify scans the deployed static HTML at
+      build time to register forms; the real forms are rendered by React at
+      runtime and are invisible to that scan. These hidden copies mirror the
+      field names so submissions from the live React forms are accepted.
+      Do not remove. Keep field `name`s in sync with the React forms.
+    -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="enquiry_type" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="register-vacancy" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="register-vacancy" />
+      <input name="bot-field" />
+      <input type="text" name="company" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="role_title" />
+      <input type="text" name="engagement_type" />
+      <input type="text" name="sector" />
+      <input type="text" name="location" />
+      <input type="text" name="salary" />
+      <input type="text" name="start_date" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="candidate-profile" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="candidate-profile" />
+      <input name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="role_type" />
+      <input type="text" name="sector" />
+      <input type="text" name="location" />
+      <input type="text" name="salary_expectation" />
+      <input type="text" name="availability" />
+      <textarea name="message"></textarea>
+      <input type="file" name="cv_upload" />
+    </form>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

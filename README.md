@@ -5,7 +5,7 @@ A premium, production-ready recruitment agency website built with React, Vite, a
 ## Features
 - Mobile-first, responsive design
 - Dark premium UI (Charcoal & Burnt Orange)
-- Forms integrated with Formspree (placeholder)
+- Forms handled by Netlify Forms (no third-party account needed)
 - Fully static output, hostable on basic web hosting (like IONOS)
 
 ## How to Run Locally
@@ -40,11 +40,20 @@ This will generate a `dist/public` folder containing all the static HTML/CSS/JS 
 - To change the Burnt Orange accent color, open `client/src/index.css` and update the `--primary` HSL value.
 - To update the email (`hello@joistrecruitment.co.uk`) and phone number (`+44 7873 965178`), search for them in the components (mostly in `Footer.tsx`, `Navbar.tsx`, and `Contact.tsx`).
 
-### Formspree Endpoint
-The forms currently use a placeholder endpoint. To receive emails:
-1. Create an account at [Formspree.io](https://formspree.io/).
-2. Create a new form to get your endpoint URL (e.g., `https://formspree.io/f/your_id_here`).
-3. Replace the placeholder URL in `client/src/pages/Contact.tsx`, `client/src/pages/Employers.tsx`, and `client/src/pages/Candidates.tsx` with your real Formspree URL.
+### Contact Forms (Netlify Forms)
+The three forms (Contact, Employers, Candidates) submit to **Netlify Forms** — no third-party account or endpoint required. This only works when the site is deployed to Netlify.
+
+How it's wired:
+- Netlify detects forms by scanning the deployed static HTML at build time. Because the real forms are rendered by React at runtime, hidden "detection" copies live in `client/index.html` — one per form (`contact`, `register-vacancy`, `candidate-profile`). **Keep their field `name`s in sync with the React forms.**
+- Each React form (in `client/src/pages/`) carries `data-netlify="true"`, a matching `name`, a hidden `form-name` input, and a `bot-field` honeypot. On success it redirects to `/thank-you`.
+- The Candidates form uses `multipart/form-data` so CV uploads are captured.
+
+To receive submissions by email:
+1. Deploy to Netlify and open the site's **Forms** tab (submissions are stored here automatically).
+2. Go to **Forms → [form] → Settings & notifications → Add notification → Email notification**.
+3. Send to `hello@joistrecruitment.co.uk`. Repeat for each of the three forms.
+
+> Note: Netlify Forms requires Netlify hosting. If this site is ever moved to plain static hosting (e.g. IONOS via FTP), the forms will not work and would need a different provider.
 
 ### Calendly Integration
 To add your Calendly link:

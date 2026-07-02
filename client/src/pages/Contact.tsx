@@ -108,16 +108,21 @@ export default function Contact() {
             </h2>
 
             <form
-              action="https://formspree.io/f/xbdabqbw"
+              name="contact"
               method="POST"
+              action="/thank-you"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
               className="space-y-4"
             >
-              {/* Redirect after submit */}
-              <input
-                type="hidden"
-                name="_redirect"
-                value="https://joistrecruitment.co.uk/thank-you"
-              />
+              {/* Netlify Forms: identifies which form this submission belongs to */}
+              <input type="hidden" name="form-name" value="contact" />
+              {/* Honeypot: hidden from users, catches bots */}
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
