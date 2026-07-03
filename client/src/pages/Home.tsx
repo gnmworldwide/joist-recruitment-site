@@ -18,6 +18,8 @@ import {
   Lightbulb,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
+import founderImg from "@/assets/guy-nkona-headshot.jpg";
+import { CountUp } from "@/components/ui/CountUp";
 
 const CARD_HOVER =
   "transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(211,84,0,0.12)]";
@@ -34,14 +36,18 @@ export default function Home() {
           <img
             src={heroBg}
             alt="Construction background"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+          <div className="absolute inset-0 glow-primary" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-5">
+              UK Built Environment Recruitment
+            </p>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6">
               Precision Recruitment for the{" "}
               <span className="text-primary block">Built Environment.</span>
@@ -51,11 +57,11 @@ export default function Home() {
               development teams find reliable talent across permanent, contract,
               and project-based roles.
             </p>
-            <p className="text-base text-muted-foreground/80 mb-3 max-w-2xl">
+            <p className="text-base text-muted-foreground mb-3 max-w-2xl">
               Founder-led, sector-focused, and powered by structured sourcing
               systems.
             </p>
-            <p className="text-sm text-muted-foreground/60 mb-10 max-w-2xl">
+            <p className="text-sm text-muted-foreground/80 mb-10 max-w-2xl">
               UK-focused, with bespoke international support where UK expertise
               is required.
             </p>
@@ -101,10 +107,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Positioning strip */}
+      <section className="surface-elevated border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/5">
+            {[
+              { value: 6, label: "Core sectors covered" },
+              { value: 3, label: "Ways to engage: permanent, contract, project" },
+              { display: "UK", label: "Nationwide focus, international where UK expertise is needed" },
+              { display: "1:1", label: "Founder-led search on every role" },
+            ].map((s, i) => (
+              <FadeIn
+                key={i}
+                delay={i * 0.08}
+                className="py-10 px-4 md:px-8 text-center"
+              >
+                <div className="text-4xl md:text-5xl font-heading font-bold text-primary mb-2">
+                  {"value" in s ? <CountUp to={s.value as number} /> : s.display}
+                </div>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                  {s.label}
+                </p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Sector Spotlight */}
-      <section className="py-24 bg-card border-y border-white/5">
+      <section className="py-24 bg-card border-y border-white/5 bg-grid">
         <div className="container mx-auto px-6">
           <FadeIn className="mb-16">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-4">
+              What we cover
+            </p>
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
               Core <span className="text-primary">Sectors</span>.
             </h2>
@@ -199,9 +235,13 @@ export default function Home() {
       </section>
 
       {/* How it Works */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 glow-primary-soft" />
+        <div className="container mx-auto px-6 relative z-10">
           <FadeIn className="text-center mb-20">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-4">
+              How it works
+            </p>
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
               Structured <span className="text-primary">Process</span>.
             </h2>
@@ -310,8 +350,16 @@ export default function Home() {
       </section>
 
       {/* Differentiators */}
-      <section className="py-24 bg-card border-y border-white/5">
+      <section className="py-24 surface-elevated border-y border-white/5">
         <div className="container mx-auto px-6">
+          <FadeIn className="mb-16">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-4">
+              Why Joist
+            </p>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold">
+              A different <span className="text-primary">standard</span>.
+            </h2>
+          </FadeIn>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -331,7 +379,7 @@ export default function Home() {
               },
             ].map((d, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="p-6">
+                <div className="p-8 bg-background border border-white/5 h-full transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
                   {d.icon}
                   <h3 className="text-xl font-heading font-bold mb-3">
                     {d.title}
@@ -344,10 +392,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Founder */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 glow-primary-soft" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <FadeIn className="lg:col-span-5">
+              <div className="relative">
+                <div className="absolute -inset-3 border border-primary/20" />
+                <img
+                  src={founderImg}
+                  alt="Guy Nkona, founder of Joist Recruitment"
+                  className="relative w-full aspect-[4/5] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn className="lg:col-span-7" delay={0.1}>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-4">
+                Founder-led
+              </p>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight">
+                Built by someone who works in the industry it serves.
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                Joist is led by Guy Nkona, who works across the built environment
+                and writes on the forces shaping it: skills shortages, delivery
+                pressure, and where the industry finds its next generation of
+                talent.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                That perspective sits behind every search. You deal directly with
+                the person accountable for the result, not a rotating desk of
+                account handlers.
+              </p>
+              <a
+                href="https://www.linkedin.com/company/joist-recruitment-ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+              >
+                Follow Joist on LinkedIn <ArrowRight className="w-4 h-4" />
+              </a>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Insights Preview */}
-      <section className="py-24">
+      <section className="py-24 bg-card border-y border-white/5">
         <div className="container mx-auto px-6">
           <FadeIn className="mb-16">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-4">
+              From the desk
+            </p>
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
               Joist <span className="text-primary">Insights</span>.
             </h2>
@@ -435,6 +532,21 @@ export default function Home() {
         </div>
       </section>
       */}
+
+      {/* Editorial pull-quote */}
+      <section className="py-24">
+        <div className="rule-accent max-w-xs mx-auto mb-14" />
+        <FadeIn className="container mx-auto px-6 max-w-4xl text-center">
+          <p className="text-2xl md:text-4xl font-heading font-medium leading-snug text-white">
+            &ldquo;In construction, the right hire is the difference between a
+            programme that holds and one that slips. We recruit like it matters,
+            because it does.&rdquo;
+          </p>
+          <p className="mt-8 text-sm font-medium uppercase tracking-[0.2em] text-steel">
+            The Joist approach
+          </p>
+        </FadeIn>
+      </section>
 
       {/* CTA Banner */}
       <section className="py-24 bg-primary relative overflow-hidden">

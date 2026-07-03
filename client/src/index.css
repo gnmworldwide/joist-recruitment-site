@@ -30,6 +30,7 @@
   --color-card-border: hsl(var(--card-border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+  --color-steel: hsl(var(--steel));
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
@@ -44,7 +45,7 @@
   --background: 0 0% 7%;
   --foreground: 0 0% 98%;
 
-  --card: 0 0% 10%;
+  --card: 0 0% 11%;
   --card-foreground: 0 0% 98%;
 
   --popover: 0 0% 10%;
@@ -60,7 +61,10 @@
 
   /* Deep charcoal tones for muted elements */
   --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 65%;
+  --muted-foreground: 0 0% 73%;
+
+  /* Cool steel: a quiet secondary voice alongside the burnt orange */
+  --steel: 210 16% 64%;
 
   --accent: 24 80% 20%;
   --accent-foreground: 24 100% 85%;
@@ -93,5 +97,50 @@
   }
   .bg-glass {
     @apply bg-black/40 backdrop-blur-md border border-white/10;
+  }
+
+  /* Ambient burnt-orange glow for hero / feature backdrops */
+  .glow-primary {
+    background: radial-gradient(
+      55% 55% at 50% 25%,
+      hsl(24 100% 41% / 0.18),
+      transparent 70%
+    );
+  }
+  .glow-primary-soft {
+    background: radial-gradient(
+      45% 45% at 85% 10%,
+      hsl(24 100% 41% / 0.10),
+      transparent 70%
+    );
+  }
+
+  /* Elevated surface with a subtle top-light gradient for depth */
+  .surface-elevated {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(0 0% 14%),
+      hsl(0 0% 10%)
+    );
+  }
+
+  /* Hairline gradient rule */
+  .rule-accent {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      hsl(24 100% 41% / 0.5),
+      transparent
+    );
+  }
+
+  /* Faint dotted grid texture for section backgrounds */
+  .bg-grid {
+    background-image: radial-gradient(
+      hsl(0 0% 100% / 0.035) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
   }
 }
