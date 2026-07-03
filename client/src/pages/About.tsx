@@ -19,21 +19,22 @@ export default function About() {
               Precision over <span className="text-primary">Volume</span>.
             </h1>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Joist is founded and led by{" "}
-              <strong className="text-white">Guy Nkona</strong>,
-              whose background in architecture, urban development planning, and
-              housing gives the business a practical understanding of how built
-              environment teams operate. Joist was created to bring more
-              structure, clarity, and sector awareness into recruitment across
-              construction, architecture, engineering, and development.
+              Joist was founded by{" "}
+              <strong className="text-white">Guy Nkona</strong>, who comes to
+              recruitment from inside the built environment rather than from a
+              sales desk. His background is in architecture, urban development,
+              and housing, and he writes on the forces shaping UK construction:
+              skills shortages, delivery pressure, and where the industry finds
+              its next generation of talent.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We are a founder-led, boutique specialist search firm operating
-              within the UK built environment. We combine tech-enabled sourcing
-              methodologies with deep, traditional networking to surface passive
-              talent that job boards and volume agencies miss. Our approach is
-              qualitative: we focus on fit, capability, and long-term value.
-              Not throughput.
+              That is the point of Joist. Built environment hiring is too often
+              run by generalist recruiters matching keywords on a CV to keywords
+              in a job description. Joist was built to do the opposite: to
+              understand the actual work, the commercial pressure, and the
+              difference between someone who lists the right projects and someone
+              who can deliver them. Founder-led, sector-focused, and deliberately
+              boutique.
             </p>
           </div>
 

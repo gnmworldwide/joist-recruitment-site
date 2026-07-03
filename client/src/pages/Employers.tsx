@@ -41,6 +41,55 @@ export default function Employers() {
           </p>
         </div>
 
+        {/* How the search works */}
+        <div className="mb-20 border border-white/5 bg-card p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
+          <div className="relative">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-4">
+              Our method
+            </p>
+            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3">
+              How the search works
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+              Tech-enabled does not mean automated. It means the search is
+              systematic. We use structured data to work the whole market for a
+              role, not just the handful of people actively applying, then apply
+              human judgement to everything that matters.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  t: "Map the market",
+                  d: "We build a full picture of who is out there for the role across the UK, including the people who are not on job boards.",
+                },
+                {
+                  t: "Prioritise by signal",
+                  d: "We focus on the professionals most likely to be a strong fit and genuinely open to a move, using structured data rather than guesswork.",
+                },
+                {
+                  t: "Approach directly",
+                  d: "We reach the right people personally and discreetly, so you see candidates a job advert would never surface.",
+                },
+                {
+                  t: "Screen before you see them",
+                  d: "We qualify technical and commercial fit and add consultant notes, so every shortlist is relevant. We do not forward CVs blindly.",
+                },
+              ].map((step, i) => (
+                <div key={i}>
+                  <div className="w-10 h-10 border border-primary text-primary flex items-center justify-center font-bold mb-4">
+                    {i + 1}
+                  </div>
+                  <h3 className="text-base font-bold mb-2">{step.t}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {step.d}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Services & Value Prop */}
           <div>

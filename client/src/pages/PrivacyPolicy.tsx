@@ -38,7 +38,8 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-bold mb-4">4. Data Storage and Security</h2>
-            <p>Your data is stored securely. We have implemented appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way.</p>
+            <p className="mb-4">Information you submit through the forms on this website, including any CV or supporting documents you upload, is transmitted over an encrypted connection and processed and stored by our website and forms provider, Netlify, acting as a data processor on our behalf. We have implemented appropriate measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorised way.</p>
+            <p>We retain your personal data only for as long as necessary to provide recruitment services and to meet our legal obligations. If you would like your data removed, contact us using the details below and we will delete it, unless we are required to retain it by law.</p>
           </section>
 
           <section>

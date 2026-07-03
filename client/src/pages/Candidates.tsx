@@ -41,7 +41,11 @@ export default function Candidates() {
 
         <div className="grid lg:grid-cols-2 gap-16 mb-20">
           <div className="bg-card border border-white/5 p-8 flex flex-col justify-center">
-            <h2 className="text-2xl font-heading font-bold mb-8">The Joist Advantage</h2>
+            <h2 className="text-2xl font-heading font-bold mb-2">The Joist Advantage</h2>
+            <p className="text-sm text-muted-foreground mb-8">
+              Every one of these is free to candidates. We are paid by the
+              employer when you are successfully placed, never by you.
+            </p>
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0">
