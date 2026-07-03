@@ -42,7 +42,10 @@ export default function PageLayout({
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background text-foreground">
       <Navbar />
-      <main className="flex-grow pt-20">{children}</main>
+      <main className="flex-grow pt-20 relative">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[460px] glow-top" />
+        <div className="relative">{children}</div>
+      </main>
       <Footer />
     </div>
   );

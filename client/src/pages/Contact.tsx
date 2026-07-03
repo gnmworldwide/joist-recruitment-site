@@ -28,6 +28,9 @@ export default function Contact() {
     >
       <div className="container mx-auto px-6 py-20">
         <div className="max-w-3xl mb-16">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-5">
+            Contact
+          </p>
           <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
             Initiate <span className="text-primary">Dialogue</span>.
           </h1>

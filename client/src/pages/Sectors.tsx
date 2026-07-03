@@ -12,6 +12,9 @@ export default function Sectors() {
     >
       <div className="container mx-auto px-6 py-20">
         <FadeIn className="max-w-4xl mb-20">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-5">
+            What we cover
+          </p>
           <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
             Focused <span className="text-primary">Expertise</span>.
           </h1>

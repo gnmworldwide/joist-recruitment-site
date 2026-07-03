@@ -28,6 +28,9 @@ export default function Candidates() {
     >
       <div className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mb-16 text-center mx-auto">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-5">
+            For candidates
+          </p>
           <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
             Advance with <span className="text-primary">Precision</span>.
           </h1>

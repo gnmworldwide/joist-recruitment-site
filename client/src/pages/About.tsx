@@ -12,6 +12,9 @@ export default function About() {
       <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel mb-5">
+              About Joist
+            </p>
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
               Precision over <span className="text-primary">Volume</span>.
             </h1>
