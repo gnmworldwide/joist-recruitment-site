@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLocation } from "wouter";
 import { submitNetlifyForm } from "@/lib/netlifyForms";
+import { BOOKING_URL, CONTACT_EMAIL } from "@/config/site";
 
 export default function Contact() {
   const [, navigate] = useLocation();
@@ -99,13 +100,23 @@ export default function Contact() {
                 Schedule a Call
               </h2>
               <p className="text-sm text-muted-foreground mb-6">
-                Find a time that works for you in our calendar.
+                {BOOKING_URL
+                  ? "Pick a time that suits you and book a call directly."
+                  : "Find a time that works for you and we will confirm by return."}
               </p>
 
-              {/* TODO: add Calendly URL to the href below */}
               <a
-                href="mailto:hello@joistrecruitment.co.uk?subject=Book%20a%20Call"
-                aria-label="Book a call, email us to arrange a time"
+                href={
+                  BOOKING_URL || `mailto:${CONTACT_EMAIL}?subject=Book%20a%20Call`
+                }
+                {...(BOOKING_URL
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                aria-label={
+                  BOOKING_URL
+                    ? "Book a call using our online calendar"
+                    : "Book a call, email us to arrange a time"
+                }
               >
                 <Button
                   variant="outline"
@@ -115,7 +126,9 @@ export default function Contact() {
                 </Button>
               </a>
               <p className="text-xs text-muted-foreground mt-3">
-                Email us to arrange a convenient time.
+                {BOOKING_URL
+                  ? "Opens our online booking calendar in a new tab."
+                  : "Email us to arrange a convenient time."}
               </p>
             </div>
           </div>
